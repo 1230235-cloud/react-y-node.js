@@ -1,0 +1,223 @@
+:root {
+  --ls-sidebar: 264px;
+  --ls-topbar: 56px;
+}
+
+body {
+  background-color: #f4f6f9;
+}
+
+/* ---------- Sidebar ---------- */
+.ls-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--ls-sidebar);
+  background: linear-gradient(180deg, #1e2a44 0%, #16203a 100%);
+  color: #cfd8ea;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1030;
+}
+
+.ls-brand {
+  padding: 1.15rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ls-brand strong {
+  color: #fff;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.ls-user {
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.ls-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  background: #2c3a57;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.ls-nav {
+  padding: 0.75rem 0.6rem 1.5rem;
+}
+
+.ls-nav .nav-link {
+  color: #b9c4d8;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.94rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.ls-nav .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.ls-nav .nav-link.active {
+  color: #fff;
+  background: #3b82f6;
+}
+
+.ls-section {
+  padding: 1rem 1.4rem 0.35rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #6f7f9e;
+}
+
+/* ---------- Zona principal ---------- */
+.ls-main {
+  margin-left: var(--ls-sidebar);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ls-topbar {
+  height: var(--ls-topbar);
+  background: #fff;
+  border-bottom: 1px solid #e3e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.ls-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* ---------- Login ---------- */
+.ls-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e2a44 0%, #3b82f6 100%);
+  padding: 1rem;
+}
+
+.ls-login-card {
+  width: 100%;
+  max-width: 420px;
+  border: 0;
+  border-radius: 0.9rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.28);
+}
+
+/* ---------- Tablas ---------- */
+.ls-tabla-envoltura {
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.ls-tabla {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.ls-tabla thead th {
+  background: #f8fafc;
+  border-bottom-width: 1px;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.ls-tabla td {
+  font-size: 0.92rem;
+}
+
+.ls-acciones {
+  display: flex;
+  gap: 0.35rem;
+  justify-content: flex-end;
+}
+
+/* ---------- Varios ---------- */
+.ls-foto-perfil {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0.25rem 0.9rem rgba(0, 0, 0, 0.14);
+}
+
+.ls-foto-vacia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  color: #64748b;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.ls-campo-icono {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.ls-modal-envoltura {
+  position: fixed;
+  inset: 0;
+  z-index: 1055;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 3rem 1rem;
+}
+
+.ls-modal-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 1050;
+}
+
+@media (max-width: 991.98px) {
+  .ls-sidebar {
+    position: static;
+    width: 100%;
+    max-height: none;
+  }
+
+  .ls-main {
+    margin-left: 0;
+  }
+}
